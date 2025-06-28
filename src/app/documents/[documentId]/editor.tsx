@@ -11,6 +11,7 @@ import Table from "@tiptap/extension-table";
 import TableCell from "@tiptap/extension-table-cell";
 import TableHeader from "@tiptap/extension-table-header";
 import TableRow from "@tiptap/extension-table-row";
+import Undeline from "@tiptap/extension-underline";
 
 import { useEditorStore } from "@/store/use-editor-store";
 
@@ -52,6 +53,7 @@ const Editor = () => {
     },
     extensions: [
       StarterKit,
+      Undeline,
       Image,
       ImageResize,
       Table,
