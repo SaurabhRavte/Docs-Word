@@ -6,10 +6,12 @@ import { useEditorStore } from "@/store/use-editor-store";
 import {
   BoldIcon,
   ItalicIcon,
+  ListTodoIcon,
   LucideIcon,
   MessageSquarePlusIcon,
   PrinterIcon,
   Redo2Icon,
+  RemoveFormattingIcon,
   SpellCheckIcon,
   UnderlineIcon,
   Undo2Icon,
@@ -103,6 +105,17 @@ const Toolbar = () => {
         onClick: () => console.log("TODO: Comment"),
         isActive: false,
       },
+      {
+        label: "List Todo",
+        icon: ListTodoIcon,
+        onClick: () => editor?.chain().focus().toggleTaskList().run(),
+        isActive: editor?.isActive("taskList"),
+      },
+      {
+        label: "Remove Formatting",
+        icon: RemoveFormattingIcon,
+        onClick: () => editor?.chain().focus().unsetAllMarks().run(),
+      },
     ],
   ];
 
@@ -111,7 +124,7 @@ const Toolbar = () => {
       {sectons[0].map((item) => (
         <ToolbarButton key={item.label} {...item} />
       ))}
-      <Separator orientation="vertical" className="h-6 bg-neutral-300" />
+      <Separator orientation="vertical" className="h-6 bg-neutral-600" />
       {/* Todo : Font Familu */}
 
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
