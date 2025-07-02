@@ -5,6 +5,7 @@ import StarterKit from "@tiptap/starter-kit";
 
 import Image from "@tiptap/extension-image";
 import ImageResize from "tiptap-extension-resize-image";
+import TextAlign from "@tiptap/extension-text-align";
 import TaskItem from "@tiptap/extension-task-item";
 import TaskList from "@tiptap/extension-task-list";
 import Link from "@tiptap/extension-link";
@@ -58,6 +59,9 @@ const Editor = () => {
     },
     extensions: [
       StarterKit,
+      TextAlign.configure({
+        types: ["heading", "paragraph"],
+      }),
       Link.configure({
         openOnClick: false,
         autolink: true,
