@@ -23,6 +23,7 @@ import { useEditorStore } from "@/store/use-editor-store";
 
 //Custom
 import { FontSizeExtension } from "@/extensions/font-size";
+import { lineHeightExtension } from "@/extensions/line-height";
 
 const Editor = () => {
   const { setEditor } = useEditorStore();
@@ -62,6 +63,10 @@ const Editor = () => {
     },
     extensions: [
       StarterKit,
+      lineHeightExtension.configure({
+        types: ["heading", "paragraph"],
+        defaultLineHeight: "normal",
+      }),
       FontSizeExtension,
       TextAlign.configure({
         types: ["heading", "paragraph"],
