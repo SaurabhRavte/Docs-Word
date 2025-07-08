@@ -95,7 +95,6 @@ const Editor = () => {
       }),
       TaskList,
     ],
-    content: "<p>Hello World! 🌎️</p>",
   });
 
   return (
