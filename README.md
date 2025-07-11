@@ -45,7 +45,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ## Packages used
 
 - [TipTap - EditorPage](https://tiptap.dev/docs)
-
-```
-
-```
+- [Database](https://docs.convex.dev/home)
+- [Authentication](https://docs.convex.dev/auth/clerk)
